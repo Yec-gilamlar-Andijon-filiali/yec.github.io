@@ -2,6 +2,7 @@
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>YEC Gilam — Andijon Filiali</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -394,6 +395,110 @@
   .footer-links a:hover { color:var(--gold); }
   .footer-copy { font-size:11px; color:rgba(107,140,174,.4); }
 
+
+  /* ─── MANZIL ─── */
+  #manzil { background:var(--dark); }
+  .loc-wrap { display:grid; grid-template-columns:420px 1fr; gap:32px; margin-top:48px; align-items:stretch; }
+  .loc-list { display:flex; flex-direction:column; gap:14px; }
+  .loc-card { display:flex; gap:16px; align-items:center; padding:20px; background:var(--dark2); border:1px solid var(--border); border-left:3px solid var(--blue); }
+  .loc-ico { width:46px; height:46px; border-radius:12px; background:var(--blue); display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; }
+  .loc-name { font-size:15px; font-weight:500; color:var(--white); margin-bottom:3px; }
+  .loc-addr { font-size:12px; color:var(--muted); }
+  .loc-btns { display:flex; flex-direction:column; gap:10px; margin-top:6px; }
+  .loc-btn { display:flex; align-items:center; justify-content:center; gap:10px; padding:13px 18px; font-size:13px; font-weight:500; text-decoration:none; color:#fff; background:var(--blue); border-radius:2px; transition:background .2s, transform .15s; }
+  .loc-btn:hover { background:var(--blue-l); color:var(--dark); transform:translateY(-2px); }
+  .loc-btn.alt { background:transparent; border:1px solid rgba(96,165,250,.35); color:var(--blue-l); }
+  .loc-btn.alt:hover { background:rgba(96,165,250,.12); color:var(--white); }
+  .map-frame { position:relative; min-height:440px; border:1px solid var(--border); border-radius:18px; overflow:hidden; background:var(--dark3); }
+  .map-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .social-row { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px; }
+  .soc-btn { display:inline-flex; align-items:center; gap:10px; padding:13px 26px; font-size:13px; font-weight:500; color:#fff; text-decoration:none; border-radius:3px; transition:transform .15s, filter .2s; }
+  .soc-btn:hover { transform:translateY(-2px); filter:brightness(1.1); }
+  .soc-tg { background:#229ED9; }
+  .soc-ig { background:linear-gradient(45deg,#F9A03F,#E1306C 50%,#833AB4); }
+  .footer-social { display:flex; gap:10px; }
+  .footer-social a { width:34px; height:34px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--muted); text-decoration:none; font-size:11px; font-weight:600; transition:all .2s; }
+  .footer-social a:hover { background:var(--blue); color:#fff; border-color:var(--blue); }
+  @media(max-width:900px){
+    .loc-wrap { grid-template-columns:1fr; }
+    .map-frame { min-height:340px; }
+  }
+
+
+  .ic { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; vertical-align:-3px; }
+  .dlv-icon { position:relative; width:54px; height:54px; border-radius:16px; display:flex; align-items:center; justify-content:center; margin-top:0;
+    background:linear-gradient(145deg, var(--ic1,#3B82F6), var(--ic2,#1D4ED8));
+    box-shadow:0 8px 20px -6px var(--icg,rgba(37,99,235,.7)), inset 0 1px 0 rgba(255,255,255,.35);
+    transition:transform .3s cubic-bezier(.3,1.4,.5,1), box-shadow .3s; }
+  .dlv-icon::after { content:''; position:absolute; inset:-5px; border-radius:20px; border:1px solid var(--icg,rgba(37,99,235,.7)); opacity:.25; transition:opacity .3s, inset .3s; }
+  .dlv-icon .ic { width:26px; height:26px; color:#fff; stroke-width:1.7; fill:rgba(255,255,255,.2); vertical-align:top; filter:drop-shadow(0 1px 2px rgba(0,0,0,.25)); }
+  .dlv-item:hover .dlv-icon { transform:translateY(-3px) rotate(-6deg) scale(1.06); }
+  .dlv-item:hover .dlv-icon::after { opacity:.6; inset:-7px; }
+  .dlv-item { background:linear-gradient(135deg, var(--dark2), rgba(17,30,46,.6)); }
+  .delivery-features .dlv-item:nth-child(1) .dlv-icon { --ic1:#38BDF8; --ic2:#2563EB; --icg:rgba(37,99,235,.75); }
+  .delivery-features .dlv-item:nth-child(2) .dlv-icon { --ic1:#4ADE80; --ic2:#16A34A; --icg:rgba(22,163,74,.75); }
+  .delivery-features .dlv-item:nth-child(3) .dlv-icon { --ic1:#FBBF24; --ic2:#D97706; --icg:rgba(217,119,6,.7); }
+  .delivery-features .dlv-item:nth-child(4) .dlv-icon { --ic1:#A78BFA; --ic2:#6D28D9; --icg:rgba(109,40,217,.7); }
+  .valley-row .v-dot { box-shadow:0 0 0 4px rgba(96,165,250,.18); }
+  @media(max-width:480px){ .dlv-icon { width:48px; height:48px; border-radius:14px; } .dlv-icon .ic { width:23px; height:23px; } }
+  .nav-cta, .btn-outline { display:inline-flex; align-items:center; justify-content:center; gap:8px; }
+  .footer-social a .ic { width:16px; height:16px; }
+  .loc-ico .ic { width:22px; height:22px; color:#fff; }
+  .loc-btn .ic, .soc-btn .ic { width:18px; height:18px; }
+  .loc-btn { }
+  .map-frame { isolation:isolate; z-index:0; }
+  .map-frame { isolation:isolate; z-index:0; min-height:520px; }
+  .map-frame { --m:320px; --dx:0px; --dy:0px; }
+  #yecFrame { position:absolute; top:calc(var(--dy) - var(--m)); left:calc(var(--dx) - var(--m)); width:calc(100% + 2 * var(--m)); height:calc(100% + 2 * var(--m)); border:0; background:#eee9df; }
+  .map-frame.anim #yecFrame, .map-frame.anim .yec-marker { transition:top .35s, left .35s; }
+  .map-shield { position:absolute; inset:0; z-index:2; cursor:grab; touch-action:none; }
+  .map-shield.grabbing { cursor:grabbing; }
+  .map-attr { position:absolute; right:8px; bottom:8px; z-index:4; background:rgba(255,255,255,.85); color:#4a5568; font:11px 'DM Sans',sans-serif; padding:3px 7px; border-radius:6px; text-decoration:none; }
+  .yec-marker { position:absolute; left:calc(50% + var(--dx)); top:calc(50% + var(--dy)); transform:translate(-50%,-100%); z-index:3; display:flex; flex-direction:column; align-items:center; cursor:pointer; outline:none; }
+  .yec-marker svg { width:44px; height:56px; display:block; filter:drop-shadow(0 6px 6px rgba(0,0,0,.35)); transition:transform .2s; transform-origin:50% 100%; }
+  .yec-marker:hover svg, .yec-marker:focus-visible svg { transform:scale(1.12); }
+  .yec-label { background:#2563EB; color:#fff; font:500 13px 'DM Sans',sans-serif; padding:6px 12px; border-radius:8px; margin-bottom:6px; white-space:nowrap; box-shadow:0 4px 14px rgba(0,0,0,.25); position:relative; }
+  .yec-label::after { content:''; position:absolute; left:50%; bottom:-5px; margin-left:-5px; border:5px solid transparent; border-bottom:0; border-top-color:#2563EB; }
+  .map-zoom { position:absolute; top:84px; right:14px; z-index:4; display:flex; flex-direction:column; background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,.25); overflow:hidden; }
+  .map-zoom button { width:40px; height:40px; border:0; background:#fff; color:#1b2430; font-size:22px; line-height:1; cursor:pointer; }
+  .map-zoom button + button { border-top:1px solid #e4e8ee; }
+  .map-zoom button .ic { width:18px; height:18px; display:block; margin:auto; }
+  .map-zoom button:hover { background:#eef3ff; color:#2563EB; }
+  .map-open { position:absolute; left:12px; bottom:12px; z-index:4; display:inline-flex; align-items:center; gap:8px; background:#fff; color:#1b2430; text-decoration:none; font:500 13px 'DM Sans',sans-serif; padding:9px 14px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,.25); }
+  .map-open .ic { color:#E5322D; }
+  .map-open:hover { background:#f3f6ff; }
+  .yp-card { display:none; position:absolute; z-index:6; width:330px; max-width:calc(100% - 20px); max-height:calc(100% - 20px); overflow-y:auto; background:#fff; color:#1b2430; border-radius:16px; box-shadow:0 12px 40px rgba(0,0,0,.35); font-family:'DM Sans',sans-serif; }
+  .yp-card.on { display:block; }
+  .yp-x { position:absolute; top:8px; right:10px; width:28px; height:28px; border:0; background:none; font-size:24px; line-height:1; color:#8a94a3; cursor:pointer; z-index:1; }
+  .yp-x:hover { color:#1b2430; }
+  .yp { padding:18px 18px 16px; }
+  .yp-head { cursor:grab; touch-action:none; user-select:none; -webkit-user-select:none; margin:-4px -4px 0; padding:4px 4px 0; }
+  .yp-head:active, .yp-card.drag .yp-head { cursor:grabbing; }
+  .yp-grip { width:38px; height:4px; border-radius:4px; background:#d3d9e2; margin:0 auto 8px; }
+  .yp-card.drag { box-shadow:0 18px 50px rgba(0,0,0,.45); }
+  .yp-title { font-size:18px; font-weight:500; color:#2563EB; line-height:1.25; padding-right:24px; }
+  .yp-sub { font-size:12px; color:#8a94a3; margin:2px 0 12px; }
+  .yp-row { display:flex; gap:10px; align-items:flex-start; font-size:13.5px; line-height:1.45; margin-bottom:9px; color:#2a3442; }
+  .yp-row .ic { color:#8a94a3; margin-top:2px; }
+  .yp-row a { color:#2563EB; text-decoration:none; word-break:break-all; }
+  .yp-row a:hover { text-decoration:underline; }
+  .yp-photos-h { display:flex; align-items:center; gap:6px; font-size:12px; color:#6b7686; margin:12px 0 7px; }
+  .yp-photos-h .ic { width:15px; height:15px; }
+  .yp-photos { display:flex; gap:6px; }
+  .yp-photos img { flex:1 1 0; min-width:0; width:0; height:84px; object-fit:cover; border-radius:10px; cursor:pointer; transition:transform .15s; background:#eef1f6; }
+  .yp-photos img:hover { transform:scale(1.06); }
+  .yp-btns { display:flex; gap:8px; margin-top:10px; }
+  .yp-btns a.yp-go, .yp-btns a.yp-tg { flex:1; text-align:center; padding:11px 10px; border-radius:10px; font-size:13px; font-weight:500; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:7px; color:#fff; }
+  .yp-btns a.yp-go { background:#2563EB; }
+  .yp-btns a.yp-go:hover { background:#1d4fd0; }
+  .yp-btns a.yp-tg { background:#229ED9; }
+  .yp-btns a.yp-tg:hover { background:#1b8bbf; }
+  .yp-btns a .ic { stroke:#fff; }
+  @media(max-width:900px){
+    .map-frame { min-height:460px; }
+    .loc-btns { gap:8px; }
+  }
+
   /* ─── TOAST ─── */
   .toast { position:fixed; bottom:26px; right:26px; background:var(--blue); color:#fff; padding:12px 20px; font-size:13px; font-weight:500; z-index:999; transform:translateY(100px); opacity:0; transition:transform .4s, opacity .4s; border-radius:2px; }
   .toast.show { transform:translateY(0); opacity:1; }
@@ -505,9 +610,104 @@
     .stat-num { font-size:36px; }
     .stat-item { padding:22px 16px; }
   }
+
+  /* ═════════ TELEFON UCHUN MAXSUS KO'RINISH ═════════ */
+  .lb-thumbnails { scrollbar-width:thin; }
+  @media (hover:none) {
+    .gallery-overlay { opacity:1; background:linear-gradient(to top, rgba(6,14,24,.92) 0%, rgba(6,14,24,.35) 38%, transparent 62%); padding:12px; }
+    .gallery-overlay .g-btn { display:none; }
+    .gallery-card:hover img, .cat-item:hover img, .hm-item:hover img { transform:none; }
+  }
+  @media (max-width:900px) {
+    html { -webkit-tap-highlight-color:transparent; }
+
+
+    /* nav */
+    .nav-cta { padding:9px 14px; font-size:12px; }
+    .nav-logo-text { font-size:10px; }
+
+    /* hero: gilam rasmlari telefonda ham ko'rinadi */
+    .hero { min-height:auto; }
+    .hero-visual { display:flex; width:100%; }
+    .hero-mosaic { width:100%; height:auto; grid-template-rows:auto; grid-template-columns:1fr 1fr; }
+    .hm-big { grid-row:auto; grid-column:span 2; }
+    .hm-big img { aspect-ratio:16/10; }
+    .hm-item:not(.hm-big) img { aspect-ratio:1; }
+    .hero-btns .btn-blue, .hero-btns .btn-outline { padding:16px 20px; font-size:15px; border-radius:12px; }
+
+    /* galereya: 2 ustun, barcha rasm nomi bilan ochiq */
+    .gallery-grid { grid-template-columns:1fr 1fr !important; gap:6px; }
+    .gallery-card, .gallery-card.tall, .gallery-card.wide { grid-row:auto; }
+    .gallery-card.wide { grid-column:span 2 !important; }
+    .gallery-card img { min-height:0; aspect-ratio:4/5; height:100%; }
+    .gallery-card.wide img { aspect-ratio:16/10; }
+    .g-name { font-size:13px; margin-bottom:1px; }
+    .g-type { font-size:10.5px; margin-bottom:0; }
+    .filter-tabs { overflow-x:auto; flex-wrap:nowrap; padding-bottom:4px; margin-left:-4px; }
+    .ftab { white-space:nowrap; padding:10px 16px; border-radius:20px; }
+    .cat-grid { grid-template-columns:1fr 1fr !important; gap:6px; }
+
+    /* manzil */
+    #manzil .section-heading { font-size:30px; }
+    .loc-wrap { display:flex; flex-direction:column; gap:18px; margin-top:28px; }
+    .map-frame { order:-1; min-height:0; height:min(68vh, 540px); border-radius:16px; }
+    .loc-card { padding:16px; }
+    .loc-btn { height:54px; font-size:15px; border-radius:12px; padding:0 16px; }
+    .loc-btn .ic { width:20px; height:20px; }
+    .yec-label { font-size:11.5px; padding:4px 9px; }
+    .map-zoom { top:14px; right:12px; }
+    .map-zoom button { width:44px; height:44px; }
+    .map-open { left:10px; bottom:10px; padding:11px 14px; border-radius:12px; font-size:13px; }
+
+    /* xarita kartasi: ixcham, 3 ta gilam */
+    .yp-card { width:calc(100% - 20px); max-width:none; border-radius:16px; }
+    .yp { padding:14px 14px 12px; }
+    .yp-title { font-size:15px; }
+    .yp-sub { font-size:11px; }
+    .yp-sub { margin-bottom:9px; }
+    .yp-row { font-size:13.5px; margin-bottom:8px; }
+    .yp-photos-h { margin:8px 0 6px; }
+    .yp-photos img { height:74px; }
+    .yp-btns { margin-top:8px; }
+    .yp-btns a.yp-go, .yp-btns a.yp-tg { padding:12px 10px; font-size:14px; border-radius:12px; }
+
+    /* aloqa */
+    .soc-btn { flex:1 1 100%; justify-content:center; height:52px; border-radius:12px; font-size:15px; }
+    .cta-heading { font-size:clamp(28px,8vw,40px); }
+
+    /* lightbox */
+    .lightbox { padding:12px; align-items:flex-start; overflow-y:auto; }
+    .lb-inner { margin-top:56px; }
+    .lb-close { position:fixed; top:12px; right:12px; width:44px; height:44px; background:rgba(6,14,24,.8); z-index:2; }
+    .lb-img-wrap { max-height:62vh; }
+    .lb-img-wrap img { max-height:62vh; }
+    .lb-thumbnails { flex-wrap:nowrap; overflow-x:auto; justify-content:flex-start; width:100%; padding-bottom:6px; }
+    .lb-thumb { width:60px; height:60px; flex-shrink:0; }
+  }
+  @media (max-width:480px) {
+    .gallery-grid { grid-template-columns:1fr 1fr !important; }
+    .gallery-card.wide { grid-column:span 2 !important; }
+    .cat-grid { grid-template-columns:1fr 1fr !important; }
+    .nav-logo img { height:28px; }
+  }
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
+  <symbol id="i-nav" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></symbol>
+  <symbol id="i-img" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+  <symbol id="i-locate" viewBox="0 0 24 24"><line x1="2" x2="5" y1="12" y2="12"/><line x1="19" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="5"/><line x1="12" x2="12" y1="19" y2="22"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+</svg>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -523,9 +723,10 @@
     <li><a href="#kategoriya">Kategoriya</a></li>
     <li><a href="#dastavka">Dastavka</a></li>
     <li><a href="#sharhlar">Sharhlar</a></li>
+    <li><a href="#manzil">Manzil</a></li>
     <li><a href="#aloqa">Aloqa</a></li>
   </ul>
-  <a href="tel:+998910601101" class="nav-cta">📞 Qo'ng'iroq</a>
+  <a href="tel:+998910601101" class="nav-cta"><svg class="ic"><use href="#i-phone"/></svg> Qo'ng'iroq</a>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
@@ -541,18 +742,17 @@
     </p>
     <div class="hero-btns">
       <a href="#mahsulotlar" class="btn-blue">Gilamlarni ko'rish</a>
-      <a href="tel:+998910601101" class="btn-outline">📞 Qo'ng'iroq qilish</a>
     </div>
   </div>
   <div class="hero-visual">
     <div class="hero-mosaic">
-      <div class="hm-item hm-big" onclick="openLightbox(0)">
+      <div class="hm-item hm-big" onclick="openLightbox(this)">
         <img src="https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T301H.jpg" alt="Touch Blue ko'k gilam">
       </div>
-      <div class="hm-item" onclick="openLightbox(1)">
+      <div class="hm-item" onclick="openLightbox(this)">
         <img src="https://catalog.yec.uz/media/photos/collections/Steffano/L100G_Q0yPByA.jpg" alt="Steffano yashil">
       </div>
-      <div class="hm-item" onclick="openLightbox(2)">
+      <div class="hm-item" onclick="openLightbox(this)">
         <img src="https://catalog.yec.uz/media/photos/collections/Luna/S002A.jpg" alt="Luna oq gilam">
       </div>
       <div class="hm-logo-box">
@@ -597,7 +797,7 @@
 
   <div class="gallery-grid" id="galleryGrid">
 
-    <div class="gallery-card tall" data-cat="all" onclick="openLightbox(0)">
+    <div data-src="https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T301H.jpg" data-title="Touch Blue — T301H" data-desc="YEC Gilam · Ko'k rang" class="gallery-card tall" data-cat="all" onclick="openLightbox(this)">
       <img src="https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T301H.jpg" alt="Touch Blue T301H">
       <div class="gallery-overlay">
         <div class="g-name">Touch Blue — T301H</div>
@@ -606,7 +806,7 @@
       </div>
     </div>
 
-    <div class="gallery-card" data-cat="all" onclick="openLightbox(1)">
+    <div data-src="https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T301E.jpg" data-title="Touch Blue — T301E" data-desc="YEC Gilam" class="gallery-card" data-cat="all" onclick="openLightbox(this)">
       <img src="https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T301E.jpg" alt="Touch Blue T301E">
       <div class="gallery-overlay">
         <div class="g-name">Touch Blue — T301E</div>
@@ -615,7 +815,7 @@
       </div>
     </div>
 
-    <div class="gallery-card" data-cat="all" onclick="openLightbox(2)">
+    <div data-src="https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T303E.jpg" data-title="Touch Blue — T303E" data-desc="YEC Gilam" class="gallery-card" data-cat="all" onclick="openLightbox(this)">
       <img src="https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T303E.jpg" alt="Touch Blue T303E">
       <div class="gallery-overlay">
         <div class="g-name">Touch Blue — T303E</div>
@@ -624,7 +824,7 @@
       </div>
     </div>
 
-    <div class="gallery-card" data-cat="all" onclick="openLightbox(3)">
+    <div data-src="https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T302E.jpg" data-title="Touch Blue — T302E" data-desc="YEC Gilam · Issiq ton" class="gallery-card" data-cat="all" onclick="openLightbox(this)">
       <img src="https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T302E.jpg" alt="Touch Blue T302E">
       <div class="gallery-overlay">
         <div class="g-name">Touch Blue — T302E</div>
@@ -633,7 +833,7 @@
       </div>
     </div>
 
-    <div class="gallery-card tall" data-cat="all" onclick="openLightbox(4)">
+    <div data-src="https://catalog.yec.uz/media/photos/collections/Steffano/L100G_Q0yPByA.jpg" data-title="Steffano — L100G" data-desc="YEC Gilam · Yashil rang" class="gallery-card tall" data-cat="all" onclick="openLightbox(this)">
       <img src="https://catalog.yec.uz/media/photos/collections/Steffano/L100G_Q0yPByA.jpg" alt="Steffano yashil">
       <div class="gallery-overlay">
         <div class="g-name">Steffano — L100G</div>
@@ -642,7 +842,7 @@
       </div>
     </div>
 
-    <div class="gallery-card" data-cat="all" onclick="openLightbox(5)">
+    <div data-src="https://catalog.yec.uz/media/photos/collections/Steffano/L100H_uCdIrvK.jpg" data-title="Steffano — L100H" data-desc="YEC Gilam" class="gallery-card" data-cat="all" onclick="openLightbox(this)">
       <img src="https://catalog.yec.uz/media/photos/collections/Steffano/L100H_uCdIrvK.jpg" alt="Steffano L100H">
       <div class="gallery-overlay">
         <div class="g-name">Steffano — L100H</div>
@@ -651,7 +851,7 @@
       </div>
     </div>
 
-    <div class="gallery-card" data-cat="all" onclick="openLightbox(6)">
+    <div data-src="https://catalog.yec.uz/media/photos/collections/Steffano/L101F.jpg" data-title="Steffano — L101F" data-desc="YEC Gilam" class="gallery-card" data-cat="all" onclick="openLightbox(this)">
       <img src="https://catalog.yec.uz/media/photos/collections/Steffano/L101F.jpg" alt="Steffano L101F">
       <div class="gallery-overlay">
         <div class="g-name">Steffano — L101F</div>
@@ -660,7 +860,7 @@
       </div>
     </div>
 
-    <div class="gallery-card" data-cat="white" onclick="openLightbox(7)">
+    <div data-src="https://catalog.yec.uz/media/photos/collections/Luna/S002A.jpg" data-title="Luna — S002A" data-desc="YEC Gilam · Oq rang" class="gallery-card" data-cat="white" onclick="openLightbox(this)">
       <img src="https://catalog.yec.uz/media/photos/collections/Luna/S002A.jpg" alt="Luna S002A oq">
       <div class="gallery-overlay">
         <div class="g-name">Luna — S002A</div>
@@ -669,7 +869,7 @@
       </div>
     </div>
 
-    <div class="gallery-card" data-cat="white" onclick="openLightbox(8)">
+    <div data-src="https://catalog.yec.uz/media/photos/collections/Luna/S002C.jpg" data-title="Luna — S002C" data-desc="YEC Gilam · Krem rang" class="gallery-card" data-cat="white" onclick="openLightbox(this)">
       <img src="https://catalog.yec.uz/media/photos/collections/Luna/S002C.jpg" alt="Luna S002C krem">
       <div class="gallery-overlay">
         <div class="g-name">Luna — S002C</div>
@@ -678,7 +878,7 @@
       </div>
     </div>
 
-    <div class="gallery-card wide" data-cat="gold" onclick="openLightbox(9)">
+    <div data-src="https://catalog.yec.uz/media/photos/collection_avatar/2025/02/touch_gold.jpg" data-title="Touch Gold" data-desc="YEC Gilam · Zarg'aldoq kolleksiya" class="gallery-card wide" data-cat="gold" onclick="openLightbox(this)">
       <img src="https://catalog.yec.uz/media/photos/collection_avatar/2025/02/touch_gold.jpg" alt="Touch Gold">
       <div class="gallery-overlay">
         <div class="g-name">Touch Gold</div>
@@ -779,28 +979,28 @@
     <div>
       <div class="delivery-features reveal">
         <div class="dlv-item">
-          <div class="dlv-icon">📐</div>
+          <div class="dlv-icon"><svg class="ic"><use href="#i-ruler"/></svg></div>
           <div>
             <div class="dlv-title">O'lchab kesish xizmati</div>
             <div class="dlv-desc">Siz ko'rsatgan o'lchamda zavodda aniq kesamiz. Xonangizga to'liq mos keladi, chiqindi qolmaydi.</div>
           </div>
         </div>
         <div class="dlv-item">
-          <div class="dlv-icon">🚚</div>
+          <div class="dlv-icon"><svg class="ic"><use href="#i-truck"/></svg></div>
           <div>
             <div class="dlv-title">1 kun ichida <span style="color:var(--green-l)">tekin</span> yetkazib berish</div>
             <div class="dlv-desc">Andijon va atrofdagi tumanlarga buyurtma kunning o'zida tekin yetkaziladi.</div>
           </div>
         </div>
         <div class="dlv-item">
-          <div class="dlv-icon">🏠</div>
+          <div class="dlv-icon"><svg class="ic"><use href="#i-home"/></svg></div>
           <div>
             <div class="dlv-title">Uyingizga olib kirib berish</div>
             <div class="dlv-desc">Gilamni eshigigacha yetkazib, xohlasangiz xonangizga olib kirib beramiz.</div>
           </div>
         </div>
         <div class="dlv-item">
-          <div class="dlv-icon">💬</div>
+          <div class="dlv-icon"><svg class="ic"><use href="#i-chat"/></svg></div>
           <div>
             <div class="dlv-title">Bepul maslahat</div>
             <div class="dlv-desc">Qaysi gilam, qaysi o'lcham — mutaxassisimiz sizga to'g'ri tanlov qilishda yordam beradi.</div>
@@ -820,7 +1020,63 @@
         <div class="valley-row"><div class="v-dot"></div><div class="v-name">Asaka, Shahrixon, Xo'jaobod</div><div class="v-tag" style="background:rgba(22,163,74,.15);color:#86EFAC;border:1px solid rgba(22,163,74,.25)">Tekin</div></div>
         <div class="valley-row"><div class="v-dot"></div><div class="v-name">Boshqa tumanlar</div><div class="v-tag" style="background:rgba(22,163,74,.15);color:#86EFAC;border:1px solid rgba(22,163,74,.25)">Tekin</div></div>
       </div>
-      <a href="tel:+998910601101" class="btn-blue" style="text-align:center;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none">📞 +998 91 060 11 01 — Dastavka buyurtma</a>
+      <a href="tel:+998910601101" class="btn-blue" style="text-align:center;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none"><svg class="ic"><use href="#i-phone"/></svg> +998 91 060 11 01 — Dastavka buyurtma</a>
+    </div>
+  </div>
+</section>
+
+<!-- MANZIL -->
+<section id="manzil">
+  <div class="reveal">
+    <span class="section-tag">Bizni toping</span>
+    <h2 class="section-heading">Bizning <em>manzillarimiz</em></h2>
+    <p class="section-sub">Andijon filialimizga keling — gilamlarni jonli ko'ring va tanlang.</p>
+  </div>
+  <div class="loc-wrap">
+    <div class="loc-list reveal">
+      <div class="loc-card">
+        <div class="loc-ico"><svg class="ic"><use href="#i-pin"/></svg></div>
+        <div>
+          <div class="loc-name">YEC Gilam do'koni</div>
+          <div class="loc-addr">Bobur prospekt, Andijon, O'zbekiston</div>
+        </div>
+      </div>
+      <div class="loc-btns">
+        <a class="loc-btn routeLink" href="https://yandex.com/maps/?rtext=~40.801530,72.333283&rtt=auto" target="_blank" rel="noopener"><svg class="ic"><use href="#i-nav"/></svg> Yo'nalish olish</a>
+        <a class="loc-btn alt" target="_blank" rel="noopener" href="https://yandex.com/maps/?mode=search&text=Yec%20Gilam%20Andijon&ll=72.333283%2C40.801530&z=19"><svg class="ic"><use href="#i-map"/></svg> Yandex Xaritada ochish</a>
+        <a class="loc-btn alt" target="_blank" rel="noopener" href="https://maps.apple.com/?q=Yec+Gilam+Andijon&ll=40.801530%2C72.333283&z=19"><svg class="ic"><use href="#i-map"/></svg> Apple Xaritada ochish</a>
+        <a class="loc-btn alt" href="tel:+998910601101"><svg class="ic"><use href="#i-phone"/></svg> +998 91 060 11 01</a>
+      </div>
+    </div>
+    <div class="map-frame reveal" id="mapFrame">
+      <iframe id="yecFrame" title="YEC Gilam do'koni — Yandex xarita" referrerpolicy="no-referrer-when-downgrade" src="about:blank"></iframe>
+      <div class="map-shield" id="mapShield"></div>
+      <div class="yec-marker" id="yecPin" role="button" tabindex="0" aria-label="YEC Gilam do'koni">
+        <span class="yec-label">YEC Gilam do'koni</span>
+        <svg viewBox="0 0 44 56"><path d="M22 1C10.4 1 1 10.2 1 21.6 1 36.5 22 55 22 55s21-18.5 21-33.4C43 10.2 33.6 1 22 1Z" fill="#2563EB" stroke="#fff" stroke-width="2.5"/><circle cx="22" cy="21" r="12" fill="#fff"/><g fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="14.5" y="14.5" width="15" height="13" rx="2"/><path d="M14.5 19.5h15M14.5 23.5h15"/></g></svg>
+      </div>
+      <div class="map-zoom"><button type="button" id="zIn" aria-label="Kattalashtirish">+</button><button type="button" id="zOut" aria-label="Kichraytirish">−</button><button type="button" id="zHome" aria-label="Do'konga qaytish" title="Do'konga qaytish"><svg class="ic"><use href="#i-locate"/></svg></button></div>
+      <a class="map-attr" href="https://yandex.com/legal/maps_termsofuse/" target="_blank" rel="noopener">© Яндекс · Foydalanish shartlari</a>
+      <a class="map-open routeLinkOpen" href="https://yandex.com/maps/?mode=search&text=Yec%20Gilam%20Andijon&ll=72.333283%2C40.801530&z=19" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pin"/></svg>Yandex Xaritada ochish</a>
+      <div class="yp-card" id="ypCard">
+        <button type="button" class="yp-x" id="ypClose" aria-label="Yopish">×</button>
+        <div class="yp">
+          <div class="yp-head" id="ypHead" title="Surib boshqa joyga ko'chiring">
+            <div class="yp-grip"></div>
+            <div class="yp-title">YEC Gilam Andijon</div>
+            <div class="yp-sub">Gilam do'koni</div>
+          </div>
+          <div class="yp-row"><svg class="ic"><use href="#i-pin"/></svg><span>Bobur prospekt, Andijon, O'zbekiston</span></div>
+          <div class="yp-row"><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+998910601101">+998 91 060 11 01</a></div>
+          <div class="yp-row"><svg class="ic"><use href="#i-globe"/></svg><a href="https://t.me/Andijan_YEC_Gilomlari" target="_blank" rel="noopener">t.me/Andijan_YEC_Gilomlari</a></div>
+          <div class="yp-photos-h"><svg class="ic"><use href="#i-img"/></svg>Gilamlarimizdan — bosib kattalashtiring</div>
+          <div class="yp-photos" id="ypPhotos"></div>
+          <div class="yp-btns">
+            <a class="yp-go routeLink" href="https://yandex.com/maps/?rtext=~40.801530,72.333283&rtt=auto" target="_blank" rel="noopener"><svg class="ic"><use href="#i-nav"/></svg>Borish usuli</a>
+            <a class="yp-tg" href="https://t.me/Andijan_YEC_Gilomlari" target="_blank" rel="noopener"><svg class="ic"><use href="#i-send"/></svg>Telegram</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -842,9 +1098,16 @@
         box-shadow:0 8px 32px rgba(37,99,235,0.35);
       " onmouseover="this.style.background='#60A5FA';this.style.color='#060E18';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.background='#2563EB';this.style.color='#fff';this.style.transform='translateY(0)'">
-        <span style="font-size:24px">📞</span>
+        <svg class="ic" style="width:24px;height:24px"><use href="#i-phone"/></svg>
         +998 91 060 11 01
       </a>
+    </div>
+    <div class="reveal" style="margin-bottom:8px">
+      <p class="cta-note" style="margin-bottom:14px">Yangiliklar va aksiyalar uchun bizga obuna bo'ling</p>
+      <div class="social-row">
+        <a class="soc-btn soc-tg" href="https://t.me/Andijan_YEC_Gilomlari" target="_blank" rel="noopener"><svg class="ic"><use href="#i-send"/></svg> Telegram guruh</a>
+        <a class="soc-btn soc-ig" href="https://www.instagram.com/yec_andijon_gilamlari" target="_blank" rel="noopener"><svg class="ic"><use href="#i-insta"/></svg> Instagram</a>
+      </div>
     </div>
 
   </div>
@@ -861,7 +1124,12 @@
     <a href="#kategoriya">Katalog</a>
     <a href="#dastavka">Dastavka</a>
     <a href="#sharhlar">Sharhlar</a>
+    <a href="#manzil">Manzil</a>
     <a href="#aloqa">Aloqa</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://t.me/Andijan_YEC_Gilomlari" target="_blank" rel="noopener" title="Telegram"><svg class="ic"><use href="#i-send"/></svg></a>
+    <a href="https://www.instagram.com/yec_andijon_gilamlari" target="_blank" rel="noopener" title="Instagram"><svg class="ic"><use href="#i-insta"/></svg></a>
   </div>
   <div class="footer-copy">© 2025 YEC Gilam — Andijon</div>
 </footer>
@@ -961,26 +1229,70 @@
     });
   }
 
-  // ─── LIGHTBOX DATA ───
-  const lbItems = [
-    { src:'https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T301H.jpg', title:'Touch Blue — T301H', desc:'YEC Gilam · Ko\'k rang' },
-    { src:'https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T301E.jpg', title:'Touch Blue — T301E', desc:'YEC Gilam · Ko\'k rang' },
-    { src:'https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T303E.jpg', title:'Touch Blue — T303E', desc:'YEC Gilam · Ko\'k rang' },
-    { src:'https://catalog.yec.uz/media/photos/collections/Touch%20Blue/T302E.jpg', title:'Touch Blue — T302E', desc:'YEC Gilam · Issiq ton' },
-    { src:'https://catalog.yec.uz/media/photos/collections/Steffano/L100G_Q0yPByA.jpg', title:'Steffano — L100G', desc:'YEC Gilam · Yashil rang' },
-    { src:'https://catalog.yec.uz/media/photos/collections/Steffano/L100H_uCdIrvK.jpg', title:'Steffano — L100H', desc:'YEC Gilam' },
-    { src:'https://catalog.yec.uz/media/photos/collections/Steffano/L101F.jpg', title:'Steffano — L101F', desc:'YEC Gilam' },
-    { src:'https://catalog.yec.uz/media/photos/collections/Luna/S002A.jpg', title:'Luna — S002A', desc:'YEC Gilam · Oq rang' },
-    { src:'https://catalog.yec.uz/media/photos/collections/Luna/S002C.jpg', title:'Luna — S002C', desc:'YEC Gilam · Krem rang' },
-    { src:'https://catalog.yec.uz/media/photos/collection_avatar/2025/02/touch_gold.jpg', title:'Touch Gold', desc:'YEC Gilam · Zarg\'aldoq kolleksiya' },
+  // ─── QO'SHIMCHA GILAMLAR ───
+  // Yangi rasm qo'shish uchun shu ro'yxatga bitta qator qo'shing: [rasm_url, nom, tavsif, toifa(all/white/gold)]
+  // Rasm ochilmasa (404) — karta avtomatik yashiriladi.
+  const B = 'https://catalog.yec.uz/media/photos/collections/';
+  const EXTRA_RUGS = [
+    [B+'Touch%20Blue/T301A.jpg','Touch Blue — T301A','YEC Gilam · Ko\'k rang','all'],
+    [B+'Touch%20Blue/T301F.jpg','Touch Blue — T301F','YEC Gilam · Ko\'k rang','all'],
+    [B+'Touch%20Blue/T302H.jpg','Touch Blue — T302H','YEC Gilam · Issiq ton','all'],
+    [B+'Touch%20Blue/T303H.jpg','Touch Blue — T303H','YEC Gilam · Ko\'k rang','all'],
+    [B+'Steffano/L100F.jpg','Steffano — L100F','YEC Gilam · Yashil rang','all'],
+    [B+'Steffano/L101G.jpg','Steffano — L101G','YEC Gilam · Yashil rang','all'],
+    [B+'Steffano/L101H.jpg','Steffano — L101H','YEC Gilam','all'],
+    [B+'Luna/S002B.jpg','Luna — S002B','YEC Gilam · Oq rang','white'],
+    [B+'Luna/S002D.jpg','Luna — S002D','YEC Gilam · Krem rang','white'],
+    [B+'Luna/S002E.jpg','Luna — S002E','YEC Gilam · Oq rang','white'],
+    [B+'Luna/S001A.jpg','Luna — S001A','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S001B.jpg','Luna — S001B','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S001C.jpg','Luna — S001C','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S003A.jpg','Luna — S003A','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S003B.jpg','Luna — S003B','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S003C.jpg','Luna — S003C','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S004A.jpg','Luna — S004A','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S004B.jpg','Luna — S004B','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S004C.jpg','Luna — S004C','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S005A.jpg','Luna — S005A','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S005C.jpg','Luna — S005C','YEC Gilam · Oq / krem rang','white'],
+    [B+'Luna/S002F.jpg','Luna — S002F','YEC Gilam · Oq / krem rang','white'],
   ];
+  (function addExtra(){
+    const grid = document.getElementById('galleryGrid');
+    EXTRA_RUGS.forEach(([src,title,desc,cat]) => {
+      const card = document.createElement('div');
+      card.className = 'gallery-card';
+      card.dataset.cat = cat; card.dataset.src = src; card.dataset.title = title; card.dataset.desc = desc;
+      card.setAttribute('onclick','openLightbox(this)');
+      const img = new Image();
+      img.alt = title; img.loading = 'lazy';
+      img.onerror = () => card.remove();
+      img.src = src;
+      const ov = document.createElement('div');
+      ov.className = 'gallery-overlay';
+      ov.innerHTML = '<div class="g-name"></div><div class="g-type"></div><button class="g-btn">Ko\'rish</button>';
+      ov.querySelector('.g-name').textContent = title;
+      ov.querySelector('.g-type').textContent = desc;
+      card.append(img, ov);
+      grid.appendChild(card);
+    });
+  })();
 
+  let lbItems = [];
   let lbCurrent = 0;
 
-  function openLightbox(idx) {
-    lbCurrent = idx;
-    const lb = document.getElementById('lightbox');
-    lb.classList.add('open');
+  function openLightbox(card) {
+    lbItems = Array.from(document.querySelectorAll('#galleryGrid .gallery-card')).map(c => ({
+      src: c.dataset.src, title: c.dataset.title, desc: c.dataset.desc
+    }));
+    const all = Array.from(document.querySelectorAll('#galleryGrid .gallery-card'));
+    let idx = all.indexOf(card);
+    if (idx < 0) {
+      const im = card.querySelector && card.querySelector('img');
+      if (im) idx = lbItems.findIndex(i => i.src === im.getAttribute('src'));
+    }
+    lbCurrent = Math.max(0, idx);
+    document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
     renderLightbox();
     buildThumbs();
@@ -1029,6 +1341,163 @@
     if (e.key === 'ArrowLeft') lbNav(-1);
     if (e.key === 'Escape') closeLightbox();
   });
+</script>
+<script>
+  // ─── DO'KON XARITASI (Yandex) ───
+  const SHOP = { lat: 40.801530, lon: 72.333283 };
+  const WEB_ROUTE = `https://yandex.com/maps/?rtext=~${SHOP.lat},${SHOP.lon}&rtt=auto`;
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const isAndroid = /Android/i.test(navigator.userAgent);
+  const isMobile = isIOS || isAndroid;
+
+  // Yo'nalish: telefonda navigatorga, kompyuterda Yandex xaritaga (joylashuvingizdan do'kongacha)
+  function openRoute(e) {
+    if (!isMobile) return;
+    if (e) e.preventDefault();
+    if (isIOS) {
+      location.href = `https://maps.apple.com/?daddr=${SHOP.lat},${SHOP.lon}&dirflg=d`;
+    } else {
+      location.href = `yandexnavi://build_route_on_map?lat_to=${SHOP.lat}&lon_to=${SHOP.lon}`;
+      setTimeout(() => { if (document.visibilityState === 'visible') location.href = WEB_ROUTE; }, 1400);
+    }
+  }
+  document.addEventListener('click', e => { if (e.target.closest('.routeLink')) openRoute(e); });
+
+  (function initMap() {
+    const frame = document.getElementById('mapFrame'), iframe = document.getElementById('yecFrame');
+    const pin = document.getElementById('yecPin'), card = document.getElementById('ypCard');
+    let Z = 17;
+    const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+    let dx = 0, dy = 0; const LIM = 280;
+    const applyPan = () => { frame.style.setProperty('--dx', dx + 'px'); frame.style.setProperty('--dy', dy + 'px'); };
+    const load = () => { dx = 0; dy = 0; applyPan(); iframe.src = `https://yandex.com/map-widget/v1/?ll=${SHOP.lon}%2C${SHOP.lat}&z=${Z}&l=map`; };
+    load();
+    document.getElementById('zIn').onclick  = () => { Z = clamp(Z + 1, 12, 18); load(); };
+    document.getElementById('zOut').onclick = () => { Z = clamp(Z - 1, 12, 18); load(); };
+    document.getElementById('zHome').onclick = () => {
+      frame.classList.add('anim'); dx = 0; dy = 0; applyPan();
+      setTimeout(() => { frame.classList.remove('anim'); if (card.classList.contains('on') && !moved) place(); }, 380);
+    };
+
+    // Xaritani surish (sichqoncha yoki barmoq): xarita va do'kon belgisi birga suriladi
+    let dragged = false;
+    (function pan() {
+      const sh = document.getElementById('mapShield');
+      let sx, sy, ox, oy, on = false;
+      sh.addEventListener('pointerdown', e => {
+        on = true; dragged = false; sx = e.clientX; sy = e.clientY; ox = dx; oy = dy;
+        sh.setPointerCapture(e.pointerId); sh.classList.add('grabbing');
+      });
+      sh.addEventListener('pointermove', e => {
+        if (!on) return;
+        const mx = e.clientX - sx, my = e.clientY - sy;
+        if (Math.abs(mx) + Math.abs(my) > 4) dragged = true;
+        dx = clamp(ox + mx, -LIM, LIM); dy = clamp(oy + my, -LIM, LIM);
+        applyPan();
+        if (card.classList.contains('on') && !moved) place();
+      });
+      const end = () => { on = false; sh.classList.remove('grabbing'); setTimeout(() => { dragged = false; }, 0); };
+      sh.addEventListener('pointerup', end);
+      sh.addEventListener('pointercancel', end);
+    })();
+
+    function fillPhotos() {
+      const box = document.getElementById('ypPhotos');
+      box.innerHTML = '';
+      const PICK = ['Steffano/L100H_uCdIrvK.jpg', 'Luna/S002A.jpg', 'Steffano/L100G_Q0yPByA.jpg'];
+      const all = Array.from(document.querySelectorAll('#galleryGrid .gallery-card'));
+      let cards = PICK.map(k => all.find(c => (c.dataset.src || '').includes(k))).filter(Boolean);
+      if (cards.length < 3) cards = cards.concat(all.filter(c => !cards.includes(c))).slice(0, 3);
+      cards.forEach(c => {
+        const im = document.createElement('img');
+        im.src = c.dataset.src; im.alt = c.dataset.title; im.loading = 'lazy';
+        im.onerror = () => im.remove();
+        im.onclick = () => openLightbox(c);
+        box.appendChild(im);
+      });
+    }
+    function place() {
+      const fr = frame.getBoundingClientRect(), pr = pin.getBoundingClientRect();
+      const W = fr.width, H = fr.height, cw = card.offsetWidth, ch = card.offsetHeight;
+      const px = pr.left + pr.width / 2 - fr.left, top = pr.top - fr.top, mid = top + pr.height / 2;
+      let l, t;
+      if (W < 600)                         { l = (W - cw) / 2; t = H - ch - 10; }
+      else if (top - ch - 8 >= 10)         { l = clamp(px - cw / 2, 10, W - cw - 10); t = top - ch - 8; }
+      else if (px + 40 + cw <= W - 10)     { l = px + 40; t = clamp(mid - ch / 2, 10, H - ch - 10); }
+      else if (px - 40 - cw >= 10)         { l = px - 40 - cw; t = clamp(mid - ch / 2, 10, H - ch - 10); }
+      else if (mid + 12 <= H - ch - 10)    { l = clamp(px - cw / 2, 10, W - cw - 10); t = H - ch - 10; }
+      else                                 { l = clamp(px - cw / 2, 10, W - cw - 10); t = 10; }
+      card.style.left = l + 'px'; card.style.top = Math.max(10, t) + 'px';
+    }
+    let hideT, moved = false;
+    const show = () => { clearTimeout(hideT); if (!card.classList.contains('on')) { fillPhotos(); card.classList.add('on'); } if (!moved) place(); };
+    const hide = () => { if (moved) return; hideT = setTimeout(() => card.classList.remove('on'), 250); };
+    const hideNow = () => { clearTimeout(hideT); moved = false; card.classList.remove('on'); };
+
+    pin.addEventListener('mouseenter', () => { if (!isMobile) show(); });
+    pin.addEventListener('mouseleave', () => { if (!isMobile) hide(); });
+    card.addEventListener('mouseenter', () => clearTimeout(hideT));
+    card.addEventListener('mouseleave', () => { if (!isMobile) hide(); });
+    pin.addEventListener('click', e => { e.stopPropagation(); card.classList.contains('on') && isMobile ? hideNow() : show(); });
+    pin.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(); } });
+    document.getElementById('ypClose').onclick = hideNow;
+    document.getElementById('mapShield').addEventListener('click', () => { if (!dragged) hideNow(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') hideNow(); });
+    window.addEventListener('resize', () => { if (card.classList.contains('on')) { if (moved) { clampCard(); } else place(); } });
+
+    // Kartani surib ko'chirish (sichqoncha va barmoq bilan)
+    function clampCard() {
+      const W = frame.clientWidth, H = frame.clientHeight, cw = card.offsetWidth, ch = card.offsetHeight;
+      card.style.left = clamp(parseFloat(card.style.left) || 0, 6, Math.max(6, W - cw - 6)) + 'px';
+      card.style.top  = clamp(parseFloat(card.style.top)  || 0, 6, Math.max(6, H - ch - 6)) + 'px';
+    }
+    (function drag() {
+      const head = document.getElementById('ypHead');
+      let sx, sy, ol, ot, active = false;
+      head.addEventListener('pointerdown', e => {
+        active = true; sx = e.clientX; sy = e.clientY;
+        ol = parseFloat(card.style.left) || 0; ot = parseFloat(card.style.top) || 0;
+        card.classList.add('drag'); head.setPointerCapture(e.pointerId); e.preventDefault();
+      });
+      head.addEventListener('pointermove', e => {
+        if (!active) return;
+        moved = true; clearTimeout(hideT);
+        card.style.left = (ol + e.clientX - sx) + 'px';
+        card.style.top  = (ot + e.clientY - sy) + 'px';
+        clampCard();
+      });
+      const end = () => { active = false; card.classList.remove('drag'); };
+      head.addEventListener('pointerup', end);
+      head.addEventListener('pointercancel', end);
+    })();
+  })();
+</script>
+
+<script>
+  // Telefon: lightbox'da surib (swipe) rasmlarni almashtirish
+  (function(){
+    const lb = document.getElementById('lightbox'); let x0 = null;
+    lb.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, {passive:true});
+    lb.addEventListener('touchend', e => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 50) lbNav(dx < 0 ? 1 : -1);
+    }, {passive:true});
+  })();
+  // Telefon menyusi: havola bosilganda yopiladi
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+    if (window.innerWidth <= 900) document.querySelector('.nav-links').style.display = 'none';
+  }));
+  // Telefon: xaritaga yetib kelganda do'kon kartasi (barcha rasmlar bilan) o'zi ochiladi
+  (function(){
+    if (!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent) && window.innerWidth > 900) return;
+    const frame = document.getElementById('mapFrame'), pin = document.getElementById('yecPin');
+    if (!frame || !pin) return;
+    const io = new IntersectionObserver(es => {
+      if (es[0].isIntersecting) { io.disconnect(); setTimeout(() => pin.click(), 600); }
+    }, { threshold: 0.55 });
+    io.observe(frame);
+  })();
 </script>
 </body>
 </html>
