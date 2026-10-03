@@ -690,6 +690,15 @@
     .cat-grid { grid-template-columns:1fr 1fr !important; }
     .nav-logo img { height:28px; }
   }
+
+  /* telefon: do'kon rasmi kompyuterdagidek to'liq (yarim emas) ko'rinadi */
+  @media (max-width:900px) {
+    .hero { padding-top:calc(64px + 53vw); }
+    .hero-bg { inset:64px 0 auto 0; height:auto; aspect-ratio:640 / 340; background-size:cover; background-position:center 72%; }
+    .hero-bg::after { background:
+      linear-gradient(to bottom, rgba(6,14,24,.28) 0%, rgba(6,14,24,.05) 45%, rgba(6,14,24,.75) 85%, var(--dark) 100%); }
+    .hero-grid-lines { display:none; }
+  }
 </style>
 </head>
 <body>
